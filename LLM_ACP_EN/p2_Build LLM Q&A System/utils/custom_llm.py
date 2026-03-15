@@ -16,7 +16,7 @@ def get_response(prompt):
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",  # Fill in the base_url of the DashScope service
     )
     completion = client.chat.completions.create(
-        model="qwen-plus-latest",
+        model="qwen-flash-latest",
         messages=[
             {'role': 'system', 'content': 'You are a helpful assistant.'},
             {'role': 'user', 'content': prompt}],

@@ -3,8 +3,14 @@ def load_key():
     import getpass
     import json
     import dashscope
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
     file_name = '../Key.json'
-    if os.path.exists(file_name):
+    if os.environ.get("DASHSCOPE_API_KEY"):
+        pass
+    elif os.path.exists(file_name):
         with open(file_name, 'r') as file:
             Key = json.load(file)
         if "DASHSCOPE_API_KEY" in Key:

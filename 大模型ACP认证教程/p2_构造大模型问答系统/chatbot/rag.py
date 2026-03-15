@@ -32,7 +32,7 @@ def create_index(document_path="./docs"):
         # 指定embedding 模型
         embed_model=DashScopeEmbedding(
             # 你也可以使用阿里云提供的其它embedding模型：https://help.aliyun.com/zh/model-studio/getting-started/models#3383780daf8hw
-            model_name=DashScopeTextEmbeddingModels.TEXT_EMBEDDING_V2
+            model_name=DashScopeTextEmbeddingModels.TEXT_EMBEDDING_V3
         )
     )
     return index
@@ -47,7 +47,7 @@ def load_index(persist_path="knowledge_base/test"):
     """
     storage_context = StorageContext.from_defaults(persist_dir=persist_path)
     return load_index_from_storage(storage_context,embed_model=DashScopeEmbedding(
-      model_name=DashScopeTextEmbeddingModels.TEXT_EMBEDDING_V2
+      model_name=DashScopeTextEmbeddingModels.TEXT_EMBEDDING_V3
     ))
 
 def create_query_engine(index):
@@ -62,9 +62,9 @@ def create_query_engine(index):
     query_engine = index.as_query_engine(
       # 设置为流式输出
       streaming=True,
-      # 此处使用qwen-plus模型，你也可以使用阿里云提供的其它qwen的文本生成模型：https://help.aliyun.com/zh/model-studio/getting-started/models#9f8890ce29g5u
+      # 此处使用qwen-flash模型，你也可以使用阿里云提供的其它qwen的文本生成模型：https://help.aliyun.com/zh/model-studio/getting-started/models#9f8890ce29g5u
       llm=OpenAILike(
-          model="qwen-plus",
+          model="qwen-flash",
           api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
           api_key=os.getenv("DASHSCOPE_API_KEY"),
           is_chat_model=True
