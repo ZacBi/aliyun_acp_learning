@@ -11,7 +11,10 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "agentscope>=1.0.17",
+    "datasets>=4.8.2",
+    "docx2txt>=0.9",
     "httpx[socks]>=0.28.1",
+    "ipykernel>=7.2.0",
     "langchain>=1.2.12",
     "langchain-community>=0.4.1",
     "langgraph>=1.1.2",
@@ -25,4 +28,5 @@ dependencies = [
     "nltk>=3.9.3",
     "numpy>=2.4.3",
     "openai>=2.28.0",
+    "ragas>=0.4.3",
 ]
