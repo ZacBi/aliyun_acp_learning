@@ -11,6 +11,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "agentscope>=1.0.17",
+    "datasets>=4.7.0",
     "httpx[socks]>=0.28.1",
     "langchain>=1.2.12",
     "langchain-community>=0.4.1",
@@ -25,4 +26,5 @@ dependencies = [
     "nltk>=3.9.3",
     "numpy>=2.4.3",
     "openai>=2.28.0",
+    "ragas>=0.4.3",
 ]
