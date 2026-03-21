@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-**.pyc
+**/**.pyc
 
 # C extensions
 *.so
@@ -80,6 +80,9 @@ dmypy.json
 # OS
 .DS_Store
 Thumbs.db
+
+**/nltk_data/
+**/knowledge_base/
 
 # uv (optional: uncomment if you don't want to track lockfile)
 # uv.lock
