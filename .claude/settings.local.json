@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv lock:*)",
+      "Bash(python3 -c \"import toml; data = open\\(''''uv.lock''''\\).read\\(\\)\")",
+      "Bash(rm uv.lock)",
+      "Bash(uv add:*)"
+    ]
+  }
+}
