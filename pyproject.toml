@@ -1,0 +1,35 @@
+# 默认使用清华 PyPI 镜像（default = true 表示替代 PyPI 作为默认源）
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[project]
+name = "aliyun-acp-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "agentscope>=1.0.17",
+    "datasets>=4.7.0",
+    "docx2txt>=0.9",
+    "httpx[socks]>=0.28.1",
+    "ipykernel>=7.2.0",
+    "ipywidgets>=8.1.8",
+    "langchain>=1.2.12",
+    "langchain-community>=0.4.1",
+    "langgraph>=1.1.2",
+    "llama-index>=0.14.16",
+    "llama-index-core>=0.14.17",
+    "llama-index-embeddings-dashscope>=0.5.0",
+    "llama-index-embeddings-openai-like>=0.3.0",
+    "llama-index-llms-dashscope>=0.6.0",
+    "llama-index-llms-openai-like>=0.7.0",
+    "llama-index-readers-dashscope>=0.5.0",
+    "matplotlib>=3.10.8",
+    "nltk>=3.9.3",
+    "numpy>=2.4.3",
+    "openai>=2.28.0",
+    "pydantic>=2.12.5",
+    "ragas>=0.4.3",
+]

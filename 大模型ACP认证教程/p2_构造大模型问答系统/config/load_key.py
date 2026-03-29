@@ -10,7 +10,7 @@ def load_nltk():
     核心逻辑：将资源解压到 LlamaIndex 强制要求的 _static/nltk_cache 子目录下。
     """
     # 1. 基础根目录
-    base_dir = Path("/mnt/workspace/llm_learn/nltk_data")
+    base_dir = Path("./nltk_data")
     
     # 2. 【关键】LlamaIndex 真正搜索的物理深层目录
     # 如果不解压到这里，它就会报 LookupError

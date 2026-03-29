@@ -68,9 +68,9 @@ def create_query_engine(index):
     query_engine = index.as_query_engine(
       # Set to streaming output
       streaming=True,
-      # Here we use the qwen-plus-0919 model. You can also use other Qwen text generation models provided by Alibaba Cloud: https://help.aliyun.com/zh/model-studio/getting-started/models#9f8890ce29g5u
+      # Here we use the qwen-flash-0919 model. You can also use other Qwen text generation models provided by Alibaba Cloud: https://help.aliyun.com/zh/model-studio/getting-started/models#9f8890ce29g5u
       llm=OpenAILike(
-          model="qwen-plus",
+          model="qwen-flash",
           api_base=os.getenv("DASHSCOPE_API_BASE"),
           api_key=os.getenv("DASHSCOPE_API_KEY"),
           is_chat_model=True

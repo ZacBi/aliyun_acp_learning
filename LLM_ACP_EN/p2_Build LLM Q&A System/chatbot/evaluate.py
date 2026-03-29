@@ -18,7 +18,7 @@ def evaluate_result(question, response, ground_truth):
     score = evaluate(
         dataset=dataset,
         metrics=[answer_correctness, context_recall, context_precision],
-        llm=Tongyi(model_name="qwen-plus"),
+        llm=Tongyi(model_name="qwen-flash"),
         embeddings=DashScopeEmbeddings(model="text-embedding-v3")
     )
     return score.to_pandas()
