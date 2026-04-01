@@ -38,7 +38,7 @@ oss2==2.19.0
 lagent==0.1.2
 mmengine==0.10.3
 modelscope==1.18.1
-agentscope==1.0.6
+agentscope==1.0.18
 mem0ai==0.1.118
 ipywidgets==8.1.7
 pymupdf4llm==0.2.6
